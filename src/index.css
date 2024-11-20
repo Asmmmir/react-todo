@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f4f4;
+}
+
+
+.todolist__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fefefe;
+    width: 400px;
+    min-height: 300px;
+    padding: 0.5em;
+    box-shadow: 15px 10px 30px rgb(156, 155, 155);
+    border-radius: 0.3em;
+}
+
+.todolist__add {
+    border: none;
+    padding-block: 1em;
+    width: 100%;
+    outline: none;
+
+}
+
+.todolist__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.todolist__form i {
+    padding-left: 10px;
+}
+.todolist__btn {
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: transparent;
+    font-family: 'Cutive mono';
+    font-size: 24px;
+    
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.3em;
+
+}
+
+
+.todolist__title {
+    font-family: 'Cutive mono';
+    text-align: center;
+    font-size: 64px;
+}
+
+
+.todo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ecebeb;
+    margin-block: 1em;
+    padding: 0.4em;
+}
+
+
+.todo__checkbox {
+    appearance: none;
+}
+
+.todo__checkbox + label {
+    padding-left: 2em;
+    cursor: pointer;
+}
+.todo__checkbox::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    border: 1px solid gray;
+    border-radius: 100%;
+
+}
+
+.todo__checkbox:checked.todo__checkbox::after {
+    background-image: url('./checked.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    z-index: 100;
+}
+
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+/* FILTER  */
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.filter__amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter__actions button {
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.filter__actions button.active {
+    border: 1px solid rgb(201, 201, 201);
+
+}
